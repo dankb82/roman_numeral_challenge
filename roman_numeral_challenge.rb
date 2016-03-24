@@ -4,11 +4,9 @@ require 'minitest/pride'
 # WRITE YOUR CODE HERE.  Name your method `to_roman`.
 
 def to_roman(x)
-  string = ""
-  remainder = 0
   if (x / 1000) >= 1
     d = x / 1000
-    string += ("M" * d)
+    string = ("M" * d)
     remainder = x % 1000
     if (remainder / 10) >= 1
       d = remainder / 10
@@ -69,9 +67,9 @@ class RomanNumeralsTest < Minitest::Test
   # def test_575
   #   assert_equal 'DLXXV', to_roman(575)
   # end
-  # def test_911
-  #   assert_equal 'CMXI', to_roman(911)
-  # end
+  def test_911
+    assert_equal 'CMXI', to_roman(911)
+  end
   def test_1024
     assert_equal 'MXXIV', to_roman(1024)
   end
